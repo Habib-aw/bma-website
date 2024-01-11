@@ -1,0 +1,311 @@
+#hidden {
+  visibility: hidden;
+}
+.months-title {
+  margin: auto;
+  margin-inline: 0;
+}
+label:hover {
+  cursor: pointer;
+}
+#dash-number {
+  cursor: text;
+}
+.filter-menu-item-clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.625rem, 0.5rem) scaleX(0.75);
+  transition: ease-out 0.5s;
+}
+.filter-menu-item-clicked:nth-child(2) {
+  transform: scale(0.01);
+  transition: ease-out 0.5s;
+}
+.filter-menu-item-clicked:nth-child(3) {
+  transform: rotate(135deg) translate(0.075rem, 0.65rem) scaleX(1.5) scaleY(1.1);
+  transition: ease-out 0.5s;
+}
+.filter-menu-item {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+.disable-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  pointer-events: none;
+}
+.mono {
+  font-family: "Courier New", Courier, monospace;
+}
+.jummah {
+  background-color: var(--darkBlue);
+  color: var(--lightBrown);
+  border-collapse: collapse;
+  font-size: clamp(1rem, (1.25rem+1vw), 2.5rem);
+}
+.jummah td {
+  border: 1px solid var(--lightBrown);
+}
+#calendar {
+  margin-bottom: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+}
+.bma-calendar-title {
+  margin-left: 22.5%;
+}
+.bma-calendar-title-text {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+}
+.calendar-filter {
+  display: flex;
+  gap: 2rem;
+}
+.filters-title-menu h4 {
+  font-size: max(1.5rem, 1.75vw);
+}
+.filters-title-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-menu {
+  width: 2.5rem;
+  height: 1.6rem;
+  cursor: pointer;
+  display: none;
+}
+.filter-menu span {
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  margin-bottom: 0.5rem;
+  background-color: black;
+}
+.filter-menu span:nth-child(2) {
+  width: 75%;
+  margin-left: 25%;
+}
+.filter-menu span:last-child {
+  width: 50%;
+  margin-left: 50%;
+}
+label {
+  margin-left: 0.4rem;
+}
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.filter-checkbox {
+  padding: 5%;
+}
+.filter-checkbox-wrapper {
+  margin-top: 3.5%;
+  background-color: var(--lightBrown);
+  border: 2px inset var(--darkBlue);
+  box-shadow: 0px 0px 6px var(--darkBlue);
+  color: var(--darkBlue);
+  margin-left: 1rem;
+  border-radius: 1rem;
+  width: 20%;
+}
+.jummah-pdfCalendar {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.jummah-pdfCalendar a {
+  font-size: max(1.2rem, 1.75vw);
+}
+.calendar {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  font-size: clamp(1rem, (1.25rem+1vw), 2.5rem);
+  background-color: rgb(0, 1, 40);
+  color: var(--lightBrown);
+}
+td,
+th {
+  text-align: center;
+  padding-inline: 0.75rem;
+}
+.dates-changes,
+.times-salahs {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.table-title button,
+.reset-filters {
+  box-shadow: 3px 0px 3px var(--darkBlue), -3px 0px 3px var(--darkBlue),
+    0px 3px 3px var(--darkBlue), 0px -3px 3px var(--darkBlue);
+  border: 2px solid var(--lightBrown);
+  background-color: var(--darkBlue);
+  color: var(--lightBrown);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.thead {
+  background-color: var(--darkBlue);
+  color: var(--lightBrown);
+}
+.thead th {
+  outline: 1px solid white;
+}
+.calendar td {
+  border-collapse: collapse;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.table-title {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.3em;
+}
+.months-title {
+  text-align: center;
+  width: 200px;
+}
+.calendar-with-title {
+  margin: auto;
+}
+
+.circle {
+  background: black;
+  border-radius: 50%;
+  width: 0.5rem;
+  aspect-ratio: 1/1;
+}
+
+#start-date,
+#end-date {
+  width: max(2.2rem, 1.75vw);
+}
+
+@media only screen and (min-width: 1920px) {
+  .filters-title-menu h4 {
+    font-size: 2rem;
+  }
+  .jummah-pdfCalendar a {
+    font-size: 2rem;
+  }
+  #start-date,
+  #end-date {
+    width: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .dates-changes,
+  .times-salahs,
+  .checkbox {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .calendar-filter {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .filter-menu {
+    display: block;
+  }
+  .filter-checkbox-wrapper {
+    width: 100%;
+    background-color: inherit;
+    margin-bottom: -15px;
+    color: var(--darkBlue);
+    margin-left: 0rem;
+    border: none;
+    box-shadow: none;
+  }
+  .reset-filters {
+    color: var(--lightBrown);
+    background-color: var(--darkBlue);
+  }
+  .bma-calendar-title {
+    margin-left: 0%;
+  }
+  .checkbox {
+    display: none;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .calendar-with-title {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .calendar,
+  .filter-checkbox-wrapper {
+    width: 87.5%;
+    margin: auto;
+  }
+  td,
+  th {
+    padding-inline: 0;
+    font-size: 1rem;
+  }
+  th {
+    padding-inline: 0.25rem;
+  }
+  .months-title {
+    font-size: 1.75rem;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+#dash-number {
+  margin-inline: 0.4rem;
+}
+.view {
+  display: flex;
+}
+#Today-only {
+  margin-top: 0.5em;
+}
+.dates-sm {
+  display: none;
+}
+
+.reset-filters {
+  padding: 0;
+  padding-inline: 0.5rem;
+  padding-block: 0.1rem;
+  margin-top: 1rem;
+  border-radius: 0.7vw;
+  background-color: var(--darkBlue);
+  color: var(--lightBrown);
+  border: 2px solid var(--lightBrown);
+}
+.reset-filters-wrapper {
+  width: 100%;
+}
+
+.cal-download,
+.cal-download ul {
+  text-align: center;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.cal-download h3 {
+  text-decoration: underline;
+}

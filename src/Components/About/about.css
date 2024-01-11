@@ -1,0 +1,192 @@
+.about-img {
+    float: right;
+    width: 70%;
+    margin-left: 1%;
+    /* background: #000; */
+}
+
+.about-container {
+    width: 70%;
+    background: var(--darkBlue);
+    padding-bottom: max(60vw, 65rem);
+}
+
+.future-img {
+    border: 6px solid transparent;
+    background: linear-gradient(to right, white, white),
+        linear-gradient(to right, var(--lightBrown) 65.4%, var(--darkBlue) 50%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border-radius: 5rem;
+    width: 60%;
+}
+.about-inner-container {
+    position: absolute;
+}
+.future-inner-container {
+    right: 11.5vw;
+    margin-top: 10vh;
+}
+.about-text {
+    font-size: max(1.15rem, 1.5vw);
+}
+
+.future-text {
+    width: 70%;
+    color: var(--lightBrown);
+    margin-inline: 5vw;
+}
+.history-text {
+    color: var(--lightBrown);
+    margin-top: 26%;
+    margin-left: 5vw;
+    margin-right: 25%;
+}
+.history-inner-container {
+    top: max(28rem, 55vh);
+    right: 10.5vw;
+}
+
+.about-title {
+    color: var(--lightBrown);
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: max(2.4rem, 5vw);
+    padding-top: 10vh;
+    padding-inline: 10vw;
+    margin-bottom: 0;
+}
+.about-bma {
+    font-size: 7vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: max(3.35rem, 7vw);
+    margin-bottom: 0;
+}
+.about-text h4 {
+    margin-top: 2rem;
+    text-align: center;
+    text-decoration: underline;
+}
+.future-container {
+    height: 180rem;
+    padding-top: 15vh;
+}
+@media only screen and (min-width: 1921px) {
+    .history-inner-container,
+    .future-inner-container {
+        width: 1920px;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .history-inner-container,
+    .future-inner-container {
+        right: auto;
+        float: unset;
+    }
+    .future-text {
+        width: 60%;
+    }
+    .about-text h4 {
+        font-size: 2rem;
+    }
+    .about-bma {
+        font-size: 8.5rem;
+    }
+    .about-title {
+        font-size: 6rem;
+        padding-top: 9rem;
+        padding-inline: 12rem;
+    }
+    .about-container {
+        padding-bottom: 100rem;
+    }
+    .about-text {
+        font-size: 1.75rem;
+        margin: 0;
+        /* width: 100%; */
+    }
+    .future-container {
+        padding-bottom: 200rem;
+    }
+
+    .future-inner-container {
+        margin-top: 15rem;
+    }
+    .history-img {
+        margin-right: 13rem;
+    }
+    .future-img {
+        margin-right: 14.4rem;
+    }
+    .about-text {
+        margin-left: 6.5rem;
+    }
+    .history-text {
+        margin-top: 28rem;
+        width: 62.5%;
+    }
+    /* .about-inner-container{
+    margin-inline: 2vw;
+  } */
+    .about-img {
+        width: 1200px;
+    }
+    .future-img {
+        width: 1000px;
+    }
+}
+@media only screen and (max-width: 910px) {
+    .future-container {
+        height: auto;
+    }
+    .about-img {
+        width: 100%;
+        float: unset;
+        margin: 0;
+    }
+    .about-container {
+        width: 80%;
+        padding-bottom: 0;
+    }
+    .about-inner-container {
+        margin-top: 15vh;
+        right: 0;
+        position: static;
+    }
+    .history-title {
+        height: 50vh;
+    }
+    .about-img {
+        position: absolute;
+    }
+    .about-text {
+        width: 88%;
+        margin: 0;
+        margin: 15px;
+        margin-bottom: 0;
+    }
+    .future-img {
+        border-radius: 0;
+        background: linear-gradient(to right, white, white),
+            linear-gradient(
+                to right,
+                var(--lightBrown) 80%,
+                var(--darkBlue) 50%
+            );
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+    }
+    .future-text {
+        padding-bottom: 2rem;
+    }
+    .future-title {
+        padding-block: 17.5vh;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .about-container {
+        width: 100%;
+    }
+    .about-text {
+        width: 90%;
+    }
+}

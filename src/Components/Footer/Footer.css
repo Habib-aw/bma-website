@@ -1,0 +1,110 @@
+.privacyPolicy {
+    color: var(--lightBrown);
+    text-decoration: underline;
+}
+.privacyPolicy:hover {
+    color: white;
+}
+.footer {
+    padding: 30px;
+    text-align: center;
+    background-color: var(--darkBlue);
+    color: var(--lightBrown);
+    margin-bottom: 0;
+    font-size: 1.2vw;
+}
+
+.carousel-footer {
+    margin: auto;
+    /* background: black; */
+    margin-bottom: 0;
+    /* background-image: url('../../Assets/footer-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position; */
+    background-color: var(--lightBrown);
+    padding-block: 1rem;
+}
+
+.carousel-footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.fundraisers-title {
+    display: flex;
+    justify-content: center;
+    background-color: var(--darkBlue);
+    color: var(--lightBrown);
+    margin-bottom: 0;
+    padding-block: 1vh;
+    text-align: center;
+    font-family: serif;
+    font-size: 3vw;
+}
+.carousel-footer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--darkBlue);
+    width: 50%;
+    height: 10vw;
+    color: var(--lightBrown);
+    margin: auto;
+    border-radius: 3rem;
+    margin-block: 1rem;
+    border: 2px solid var(--lightBrown);
+    box-shadow: 3px 0px 3px var(--darkBlue), -3px 0px 3px var(--darkBlue),
+        0px 3px 3px var(--darkBlue), 0px -3px 3px var(--darkBlue);
+    font-size: 1vw;
+    padding-block: 1rem;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.carousel-footer-link {
+    color: var(--lightBrown);
+    width: 50%;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 1.75px;
+}
+.carousel-footer-link:hover {
+    color: white;
+}
+@media only screen and (max-width: 1024px) {
+    .carousel-footer-item,
+    .carousel-footer-link,
+    .carousel-footer-text {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .carousel-footer-item {
+        font-size: 1.2rem;
+        height: 12rem;
+    }
+    .fundraisers-title {
+        font-size: 3rem;
+    }
+    .footer {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 910px) {
+    .carousel-footer-item {
+        font-size: 2.75vw;
+        height: 27.5vw;
+    }
+    .fundraisers-title {
+        font-size: 5.4vw;
+    }
+    .footer {
+        font-size: 2.5vw;
+    }
+}

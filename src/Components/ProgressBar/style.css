@@ -1,0 +1,47 @@
+#progressBar {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+}
+
+.progress-both-bar {
+    border-radius: 3rem;
+    height: 1.7rem;
+}
+.progress-outer-bar {
+    background: var(--lightWhite);
+}
+.progress-bar-title {
+    font-family: 'Courier New', Courier, monospace;
+}
+.progress-inner-bar {
+    /* transition: 1s ease ; */
+}
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+}
+.vr {
+    border-left: 2px solid var(--lightBrown);
+    height: 90%;
+    align-items: center;
+    margin: 0 1rem;
+}
+.progress-description-small {
+    display: none;
+}
+.percentageSm {
+    margin: auto;
+    margin-inline: 0;
+}
+
+@media only screen and (max-width: 770px) {
+    .progress-description {
+        display: none;
+    }
+    .vr {
+        visibility: hidden;
+    }
+    .progress-description-small {
+        display: block;
+    }
+}

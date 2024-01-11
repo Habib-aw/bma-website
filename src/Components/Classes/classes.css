@@ -1,0 +1,35 @@
+.classes-title{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightBrown);
+  font-size: 6vw;
+  font-family:serif;
+}
+
+.card-stack{
+  display: flex;
+  gap: 5rem;
+  margin: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+  padding-bottom:2.5rem;
+}
+.classes{
+  background: var(--darkBlue);
+}
+.student-of{
+  font-size: 0.7rem;
+}
+@media only screen and (min-width:1920px) {
+  .classes-title{
+      font-size: 5.5rem;
+  }
+}
+@media only screen and (max-width:910px) {
+  .classes-title{
+    font-size: 9vw;
+  }
+}

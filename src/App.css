@@ -1,38 +1,299 @@
-.App {
-  text-align: center;
+html {
+    scroll-behavior: smooth;
+}
+.carouselText {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.preloaderWrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--darkBlue);
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.helpCarousel {
+    bottom: 2.5rem;
+    color: var(--lightBrown);
+    font-size: 4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.helpCarousel:hover {
+    color: var(--lightBrown);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+.supportCarousel {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 1.5rem;
+    color: black;
+    font-size: 3.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+    /* background-color: var(--lightBrown); */
+}
+#root {
+    background: var(--darkBlue);
+}
+.routes {
+    background-color: var(--lightBrown);
+}
+.h100 {
+    height: max(25rem, 80vh);
+    overflow: hidden;
+    animation: slide-up 350ms forwards;
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slide-up {
+    0% {
+        margin-top: 25%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}
+:root {
+    --lightBrown: rgb(232, 208, 188);
+    --darkBlue: rgb(0, 0, 35);
+    --transparentBlack: rgba(15, 7, 1, 0.395);
+    --lightWhite: rgb(171, 163, 163);
+}
+::-webkit-scrollbar-corner {
+    background-color: var(--darkBlue);
+}
+
+::-webkit-scrollbar {
+    width: 1.25rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--lightWhite);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--darkBlue);
+    border-left: 1px solid var(--lightBrown);
+}
+
+/* --------------------------------Navbar-------------------------------- */
+.menu-clicked:nth-child(1) {
+    transform: rotate(45deg) translate(0.4rem, 0.3rem) scale(1.1);
+    transition: ease-out 0.5s;
+}
+.menu-clicked:nth-child(2) {
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+.menu-clicked:nth-child(3) {
+    transform: rotate(135deg) translate(-0.5rem, 0.5rem) scale(1.1);
+    transition: ease-out 0.5s;
+}
+.menu-unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+.toTop {
+    z-index: 10;
+    bottom: 2.5%;
+    right: 0.6%;
+    position: fixed;
+    color: var(--darkBlue);
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+/* --------------------------------Navbar-------------------------------- */
+.nav-title div {
+    margin: 0;
+    padding: 0;
+}
+.nav-title {
+    display: flex;
+    flex-wrap: wrap;
+    /* color: var(--darkBlue); */
+}
+
+.logo {
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+    color: white;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.logo p {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--darkBlue);
+    padding-block: 0.6rem;
+}
+
+.nav-links ul {
+    display: flex;
+    margin: auto;
+}
+
+.nav-links li {
+    list-style: none;
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: white; /* var(--lightBrown); */
+    display: block;
+}
+.nav-links li:hover {
+    text-decoration: underline solid;
+    text-underline-offset: 7.5px;
+}
+
+.menu {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 1rem;
+    top: 1rem;
+}
+.menu-item {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+@media only screen and (min-width: 1921px) {
+    #app {
+        width: 1920px;
+    }
+    .salah-times {
+        width: 1920px;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    #root {
+        background: var(--lightBrown);
+    }
+    #app {
+        margin: auto;
+    }
+    .cookie-bottom {
+        width: 100%;
+        height: 350px;
+    }
+    /* .logo{
+    padding-left: 25vw;
   }
+  .menu{
+    padding-right: 25vw;
+  } */
+}
+@media only screen and (max-width: 910px) {
+    .logo {
+        width: 80%;
+        justify-content: flex-start;
+    }
+    .nav-title {
+        justify-content: center;
+    }
+    .menu {
+        display: block;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+    .nav-links {
+        width: 100%;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .nav-links li {
+        text-align: center;
+        margin: auto;
+        margin-block: 0;
+        font-size: 1.7rem;
+        color: var(--darkBlue);
+        /* padding: 0.3rem 0; */
+    }
+    .nav-links li a {
+        text-align: center;
+    }
+    /* .nav-links ul:last-child{
+    padding-bottom: 0.7rem;
+  } */
+
+    .logo p {
+        font-size: 1.5rem;
+    }
+    #hide {
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        transition: height 0ms 400ms, opacity 400ms 0ms;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (max-width: 749px) {
+    .supportCarousel {
+        font-size: 2.5rem;
+        top: 5rem;
+    }
+    .helpCarousel {
+        font-size: 2rem;
+    }
 }
-
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 465px) {
+    .logo p {
+        font-size: 1.1rem;
+    }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 365px) {
+    .logo p {
+        font-size: 1rem;
+    }
+    .logo {
+        gap: 0;
+        margin-left: 0;
+    }
 }
