@@ -46,7 +46,7 @@ function App() {
 
   useEffect(() => {
     setShowMenuItems(true);
-    fetch("http://localhost:4242/")
+    fetch("https://data.baitulmamur.academy/")
       .then((response) => {
         console.log(response);
         return response.json();
